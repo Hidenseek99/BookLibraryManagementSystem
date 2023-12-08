@@ -1,0 +1,249 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  padding: 6%;
+  background-color: beige;
+  border: 5px solid #ddd;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #3498db;
+  border-radius: 8px;
+}
+
+h1 {
+  text-align: center;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.buttonG {
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 12px;
+  padding-left: 12px;
+  margin-top: 9px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #3498db;
+  color: #fff;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.buttonGEdit {
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 12px;
+    padding-left: 12px;
+    margin-top: 9px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #ffcc00;
+    color: #fff;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+
+  .buttonGDel {
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 12px;
+    padding-left: 12px;
+    margin-top: 9px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #cc3300;
+    color: #fff;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+
+caption {
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #3498db; /* Add border below caption */
+}
+
+button#getAllBooks,
+button#getAllDeletedBooks {
+  width: calc(50% - 6px); /* Adjusted width for the specific buttons */
+  margin-right: 6px;
+}
+
+button:hover
+ {
+  background-color: rgb(141, 29, 201);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border: 1px solid #ddd;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: saddlebrown;
+  color: #fff;
+}
+
+.add-book-input {
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 8px 0;
+}
+
+.action-column button {
+  display: inline-block;
+  /* margin-right: 12px; */
+}
+
+/* Add space between tables */
+#deletedBooksTable {
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 10px;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Additional styling for the input fields and button */
+#editTitle,
+#editAuthor,
+#editGenre {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+#datetime-container{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #fff;
+  }
+
+  .button-15 {
+    background-image: linear-gradient(#42A1EC, #0070C9);
+    border: 1px solid #0077CC;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    direction: ltr;
+    display: inline-block;
+    font-family: "SF Pro Text","SF Pro Icons","AOS Icons","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    line-height: 1.47059;
+    min-width: 30px;
+    overflow: visible;
+    padding: 4px 15px;
+    text-align: center;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+  }
+  
+  .button-15:disabled {
+    cursor: default;
+    opacity: .3;
+  }
+  
+  .button-15:hover {
+    background-image: linear-gradient(#51A9EE, #147BCD);
+    border-color: #1482D0;
+    text-decoration: none;
+  }
+  
+  .button-15:active {
+    background-image: linear-gradient(#3D94D9, #0067B9);
+    border-color: #006DBC;
+    outline: none;
+  }
+  
+  .button-15:focus {
+    box-shadow: rgba(131, 192, 253, 0.5) 0 0 0 3px;
+    outline: none;
+  }

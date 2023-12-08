@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Library Management System</title>
+    <link rel="stylesheet" type="text/css" href="CSS/index.css" />
+  </head>
+  <body>
+    <div id="datetime-container">
+    <div id="datetime"></div>
+  </div>
+    <h1>📘Book Library Management System📗</h1>
+    <button class="button-15" onclick="scrollToAllBooks()">Show All Books</button>
+    <button class="button-15" onclick="showDeletedBooksTable()">Show Deleted Books</button>
+    <table id="allBooksTable">
+      <caption>
+        📗Available Books📗
+        <button class="button-15" style="position: absolute; bottom: 5px; right: 0px;" onclick="showDeletedBooksTable()">To Deleted Books</button>
+      </caption>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Genre</th>
+          <th colspan="2">Action</th>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <input
+              type="text"
+              class="add-book-input"
+              id="newTitle"
+              placeholder="Title"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              class="add-book-input"
+              id="newAuthor"
+              placeholder="Author"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              class="add-book-input"
+              id="newGenre"
+              placeholder="Genre"
+            />
+          </td>
+          <td colspan="2">
+            <button class="buttonG" onclick="addBookFromTable()">Add Book</button>
+          </td>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <table id="deletedBooksTable">
+      <caption>
+        📕Deleted Books📕
+        <button class="button-15" style="position: absolute; bottom: 5px; right: 0px;" onclick="scrollToAllBooks()">Back to Available Books</button>
+      </caption>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Genre</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="JS/index.js"></script>
+  </body>
+</html>
